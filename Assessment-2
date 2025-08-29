@@ -5,7 +5,9 @@ Website: https://www.wikipedia.org/
 Tasks: 
 
 - Click 'English' using LinkText. 
+A--> driver.findElement(By.linkText("English")).click();
 
 - Click 'Privacy policy' using PartialLinkText. 
+A--> driver.findElement(By.partialLinkText("Privacy")).click();
 
 

@@ -1,12 +1,20 @@
+Assignment 3 – CSS Selectors 
+
+Website: https://www.amazon.in/ 
+
 Tasks: 
 
-- Click 'English' using LinkText. 
-A--> 
-String reqText= driver.findElement(By.id("js-link-box-en")).getText();
-driver.findElement(By.linkText(reqText)).click();
+- Search 'Laptop' using CSS ID → #twotabsearchtextbox. 
+A-->  WebElement searchBox = driver.findElement(By.cssSelector("#twotabsearchtextbox"));
+            searchBox.sendKeys("Laptop");
 
-- Click 'Privacy policy' using PartialLinkText. 
-A--> driver.findElement(By.partialLinkText("Privacy")).click();
+- Click search button using CSS Attribute → input[value='Go']. 
+A--> WebElement searchButton = driver.findElement(By.cssSelector("input[value='Go']"));
+            searchButton.click();
+
+- Select the first product using nth-child CSS selector. 
+A--> driver.findElement(By.cssSelector(".s-main-slot > div:nth-child(8) .puis-list-col-right a.a-link-normal.a-text-normal")).click();
+
 
 
 

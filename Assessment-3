@@ -1,1 +1,12 @@
+Tasks: 
+
+- Click 'English' using LinkText. 
+A--> 
+String reqText= driver.findElement(By.id("js-link-box-en")).getText();
+driver.findElement(By.linkText(reqText)).click();
+
+- Click 'Privacy policy' using PartialLinkText. 
+A--> driver.findElement(By.partialLinkText("Privacy")).click();
+
+
 

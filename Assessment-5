@@ -4,13 +4,13 @@ Website: https://www.irctc.co.in/
 
 Tasks: 
 
-- Select 'From' city using starts-with() in XPath. 
+1)- Select 'From' city using starts-with() in XPath. 
 A--> driver.findElement(By.xpath("//input[starts-with(@class,'ng-tns-c58-8 ui-inputtext')]")).sendKeys("Bhubaneswr");
 
-- Select 'To' city using contains(). 
+2)- Select 'To' city using contains(). 
 A--> driver.findElement(By.xpath("//input[contains(@class,'c58-9 ui-inputtext')]")).sendKeys("Delhi");
 
-- Select journey date using XPath parent/child navigation. 
+3)- Select journey date using XPath parent/child navigation. 
 A-->  WebElement dateField = driver.findElement(By.xpath("//span[contains(@class, '-calendar')]"));
         dateField.click();
 

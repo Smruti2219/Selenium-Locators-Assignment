@@ -5,8 +5,30 @@ Website: https://demoqa.com/elements
 Tasks: 
 
 - Expand 'Check Box' using CSS with multiple attributes. 
-A--> 
+A-->    driver.findElement(By.xpath("//span[normalize-space()='Check Box']")).click();
+        Thread.sleep(2000);
+        
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+		    js.executeScript("window.scrollBy(0, 500);");
+        
+        Thread.sleep(1000);
+        // Click "Check Box" using CSS with multiple attributes
+       driver.findElement(By.cssSelector("#tree-node > ol > li > span > button > svg")).click();
 
 - Select a checkbox using XPath with multiple conditions. 
+A-->  driver.findElement(By.xpath("(//span[@class='rct-text']/button[1]//*[name()='svg'])[1]")).click();
 
 - Verify whether the text box element is enabled/disabled. 
+        driver.findElement(By.xpath("//span[normalize-space()='Text Box']")).click();
+       
+        WebElement textBox = driver.findElement(
+            By.cssSelector("input[id='userName'][placeholder='Full Name'][type='text']")
+        );
+
+        // Verify if text box is enabled or disabled
+        if (textBox.isEnabled()) {
+            System.out.println("Text box is enabled");
+        } else {
+            System.out.println("Text box is disabled");
+        }
+

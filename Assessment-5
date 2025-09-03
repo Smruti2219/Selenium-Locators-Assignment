@@ -11,3 +11,8 @@ A--> driver.findElement(By.xpath("//input[starts-with(@class,'ng-tns-c58-8 ui-in
 A--> driver.findElement(By.xpath("//input[contains(@class,'c58-9 ui-inputtext')]")).sendKeys("Delhi");
 
 - Select journey date using XPath parent/child navigation. 
+A-->  WebElement dateField = driver.findElement(By.xpath("//span[contains(@class, '-calendar')]"));
+        dateField.click();
+
+        // Select a date, e.g. 12, using parent/child navigation
+        driver.findElement(By.xpath("//td[@class='ng-tns-c59-10 ng-star-inserted']//child::a[normalize-space()='12']")).click();

@@ -1,1 +1,23 @@
+Assignment 4 – XPath Basics 
+
+Website: https://www.flipkart.com/ 
+
+Tasks: 
+
+- Close login popup using XPath with text(). 
+//text
+A--> driver.findElement(By.xpath("//button[text()='✕']")).click();
+
+- Search for 'Mobiles' using XPath with contains(). 
+A--> driver.findElement(By.xpath("//input[contains(@title, "Search for")]")).sendKeys("mobile");
+
+- Apply filter (e.g., “4★ & above”) using XPath axes (following-sibling). 
+A--> WebElement element= driver.findElement(By.xpath("//div[text()='Customer Ratings']"));
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0, 1000);");
+
+        // Click "Custpmer Rating" element using JS
+        js.executeScript("arguments[0].click();", element);
+		//Click "4★ & above" rating option from the list.
+		driver.findElement(By.xpath("//div[text()='4★ & above']/preceding-sibling::div")).click();
 

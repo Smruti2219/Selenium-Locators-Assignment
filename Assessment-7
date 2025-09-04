@@ -6,7 +6,7 @@ Website: https://www.saucedemo.com/ Tasks:
 - Proceed to checkout. 
 - Use at least 3 different locator strategies (ID, CSS, XPath, etc.) in your script.
 
-public class Assessmen_03 {
+public class Assessmen_07 {
 
 	public static void main(String[] args) throws InterruptedException {
       

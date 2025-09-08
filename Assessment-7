@@ -42,7 +42,7 @@ public class Assessmen_07 {
         driver.findElement(By.id("checkout")).click();
         
         Thread.sleep(2000);
-        // --- Step---
+        // --- Step 5---
         driver.findElement(By.id("first-name")).sendKeys("John");
         driver.findElement(By.id("last-name")).sendKeys("Doe");
         driver.findElement(By.id("postal-code")).sendKeys("12345");

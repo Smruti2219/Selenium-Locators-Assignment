@@ -16,7 +16,7 @@ A-->    driver.findElement(By.xpath("//span[normalize-space()='Check Box']")).cl
        driver.findElement(By.cssSelector("#tree-node > ol > li > span > button > svg")).click();
 
 2) - Select a checkbox using XPath with multiple conditions. 
-A-->  driver.findElement(By.xpath("(//span[@class='rct-text']/button[1]//*[name()='svg'])[1]")).click();
+A-->  driver.findElement(By.xpath("//span[@class='rct-title' and text()='Desktop']/preceding-sibling::span[@class='rct-checkbox']")).click();
 
 3) - Verify whether the text box element is enabled/disabled. 
         driver.findElement(By.xpath("//span[normalize-space()='Text Box']")).click();
